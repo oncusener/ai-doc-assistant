@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --color-brand-50: oklch(0.97 0.02 260);
+  --color-brand-100: oklch(0.93 0.04 260);
+  --color-brand-500: oklch(0.58 0.17 262);
+  --color-brand-600: oklch(0.51 0.18 262);
+  --color-brand-700: oklch(0.45 0.17 262);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+}
+
+.prose-answer p {
+  @apply my-2 leading-relaxed;
+}
+.prose-answer ul {
+  @apply my-2 list-disc space-y-1 pl-5;
+}
+.prose-answer ol {
+  @apply my-2 list-decimal space-y-1 pl-5;
+}
+.prose-answer strong {
+  @apply font-semibold;
+}
+.prose-answer code {
+  @apply rounded bg-slate-100 px-1 py-0.5 text-[0.9em] dark:bg-slate-800;
+}
+.prose-answer a:not(.citation) {
+  @apply text-brand-600 underline dark:text-brand-100;
+}

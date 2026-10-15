@@ -1,0 +1,17 @@
+node_modules/
+dist/
+web/dist/
+server/dist/
+
+# local database and model cache
+data/
+.cache/
+
+# secrets
+.env
+.env.*
+!.env.example
+
+.DS_Store
+*.log
+coverage/
