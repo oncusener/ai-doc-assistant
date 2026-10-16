@@ -36,6 +36,8 @@ export const config = {
   host: process.env.HOST ?? "127.0.0.1",
   port: int("PORT", 8787),
   maxUploadBytes: int("MAX_UPLOAD_MB", 20) * 1024 * 1024,
+  // Optional company name shown in the web app instead of the default title.
+  brandName: process.env.BRAND_NAME?.trim() || null,
 
   databaseUrl: process.env.DATABASE_URL || undefined,
   dataDir: process.env.DATA_DIR ?? path.join(ROOT_DIR, "data"),

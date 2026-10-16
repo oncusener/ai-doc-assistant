@@ -18,6 +18,7 @@ export async function buildApp(db: Db, provider: ChatProvider): Promise<FastifyI
     const { rows } = await db.query<{ count: string | number }>("SELECT count(*) AS count FROM documents");
     return {
       status: "ok",
+      brandName: config.brandName,
       provider: provider.name,
       model: provider.model,
       embeddingModel: config.embeddingModel,
