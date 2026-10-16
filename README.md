@@ -83,6 +83,7 @@ All settings live in `.env` (see [`.env.example`](.env.example)).
 | `EMBEDDING_MODEL` | `Xenova/multilingual-e5-small` | Any feature-extraction model; set `EMBEDDING_DIM` to match |
 | `RETRIEVAL_TOP_K` | `6` | Chunks sent with each question |
 | `MAX_UPLOAD_MB` | `20` | Upload size limit |
+| `BRAND_NAME` | empty | Company name shown in the web app instead of the default title |
 
 ## API
 

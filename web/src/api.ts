@@ -10,6 +10,7 @@ export interface DocumentInfo {
 
 export interface Health {
   status: string;
+  brandName: string | null;
   provider: string;
   model: string;
   embeddingModel: string;

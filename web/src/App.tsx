@@ -10,6 +10,7 @@ export function App() {
   const [health, setHealth] = useState<Health | null>(null);
   const [chatKey, setChatKey] = useState(0);
   const t = getStrings(lang);
+  const title = health?.brandName || t.title;
 
   const refresh = useCallback(() => {
     listDocuments().then(setDocuments).catch(() => setDocuments([]));
@@ -19,8 +20,8 @@ export function App() {
   useEffect(refresh, [refresh]);
   useEffect(() => {
     document.documentElement.lang = lang;
-    document.title = t.title;
-  }, [lang, t.title]);
+    document.title = title;
+  }, [lang, title]);
 
   function switchLang(next: Lang) {
     setLang(next);
@@ -35,7 +36,7 @@ export function App() {
             <div>
               <h1 className="flex items-center gap-2 text-lg font-semibold tracking-tight">
                 <span className="grid size-7 place-items-center rounded-lg bg-brand-600 text-sm text-white">✦</span>
-                {t.title}
+                {title}
               </h1>
               <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{t.tagline}</p>
             </div>
